@@ -40,6 +40,41 @@ function CalculateRectangleArea() {
     const area= width * length;
     const areaSpan= document.getElementById("rectangle-area");
     areaSpan.innerText = area;
-    
 
+
+}
+
+// reusable function  ---> reduce duplicate code
+function CalculateParallelogramArea(){
+    const base = getInputValue("parallelogram-b")
+    // console.log(base);
+    const height = getInputValue("parallelogram-h") 
+    // console.log(height);
+    const area= base * height
+    setElementInnerText("parallelogram-area", area);
+}
+
+function CalculateEllipseArea(){
+    const major= getInputValue("major-axis");
+    const minor= getInputValue("minor-axis");
+
+    const areaOfEllipse= 3.1416 * major * minor;
+
+    setElementInnerText("Ellipse-area", areaOfEllipse);
+}
+
+// reuseable get  input value field in number;
+
+function getInputValue(fieldId){
+    const inputField= document.getElementById(fieldId);
+    const inputValueText= inputField.value;
+    const value= parseFloat(inputValueText);
+    return value;
+}
+
+
+// reuseable set span p div etc  text
+function setElementInnerText( elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText= area;
 }
