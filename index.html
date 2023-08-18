@@ -20,7 +20,92 @@
             <button class="px-6 py-4 bg-[#1090D8] rounded-lg text-3xl font-semibold text-white">Blog</button>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section>
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                    <!-- first child -->
+                    <div class="card bg-base-100 shadow-xl gap-6">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body w-96 items-center text-center space-y-3">
+                            <h2 class="card-title">Triangle</h2>
+                            <div>
+                                <p>Area (A) = 0.5 X b X h</p>
+                                <div class="gap-4">
+                                    <input id="triangle-base" class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="Base">
+                                    <span class="ml-2">Cm</span>
+                                    <input id="triangle-height" class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="Height">
+                                    <span class="ml-2">Cm</span>
+                                </div>
+                                <p class="my-4 text-2xl">Area: <span id="triangle-area">00</span> cm<sup>2</sup></p>
+                            </div>
+                            <div class="card-actions w-full ">
+                                <button onclick="CalculateTriangleArea()" class="btn btn-primary w-full ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second child -->
+                    <div class="card  bg-base-100 shadow-xl gap-6">
+                        <figure class="px-10 pt-14">
+                            <img  src="./images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body w-96 items-center text-center space-y-3">
+                            <h2 class="card-title">Rectangle</h2>
+                            <div>
+                                <p>Area (A) = w X l</p>
+                                <div class="gap-4">
+                                    <input id="rectangle-w" class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="W">
+                                    <span class="ml-2">Cm</span>
+                                    <input id="rectangle-l" class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="I">
+                                    <span class="ml-2">Cm</span>
+                                </div>
+                                <p class="my-4 text-2xl">Area: <span id="rectangle-area">00</span> cm<sup>2</sup></p>
+                            </div>
+                            <div class="card-actions w-full ">
+                                <button onclick="CalculateRectangleArea()" class="btn btn-primary w-full ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third child -->
+                    <div class="card  bg-base-100 shadow-xl gap-6">
+                        <figure class="px-10 pt-[75px]">
+                            <img  src="./images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body w-96 items-center text-center space-y-3">
+                            <h2 class="card-title">Parallelogram</h2>
+                            <div>
+                                <p>Area (A) = b X h</p>
+                                <div class="gap-4">
+                                    <input  class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="Base">
+                                    <span class="ml-2">Cm</span>
+                                    <input class="border px-2 text-xl bg-slate-100 w-20" type="text" placeholder="Height">
+                                    <span class="ml-2">Cm</span>
+                                </div>
+                                <p class="my-4 text-2xl">Area: <span>00000</span></p>
+                            </div>
+                            <div class="card-actions w-full ">
+                                <button class="btn btn-primary w-full ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="bg-slate-100 w-64">
+                    <h1 class="text-2xl">Area Calculation
+                        <hr>
+                    </h1>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-72"></section>
+    </main>
+    <script src="./js/areaCalculate.js"></script>
 </body>
 
 </html>
